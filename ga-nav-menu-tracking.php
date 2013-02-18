@@ -3,7 +3,7 @@
 Plugin Name: Google Analytics Nav Menu Tracking
 Plugin URI: http://secretstache.com
 Description: Hide custom menu items based on user roles
-Version: 0.4
+Version: 0.5
 Author: Paul de Wouters
 Author URI: http://secretstache.com
 License: GPL2
@@ -40,7 +40,7 @@ if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 
 		function __construct() {
 
-			define( 'SSM_GA_VERSION', '0.4' );
+			define( 'SSM_GA_VERSION', '0.5' );
 			// Include required files
 			if ( is_admin() ) {
 				$this->admin_includes();
@@ -71,7 +71,7 @@ if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 		 */
 		function admin_includes() {
 			/* include the custom admin walker */
-			include_once( plugin_dir_path( __FILE__ ) . 'inc/class.Walker_Nav_Menu_Edit_Roles.php' );
+			include_once( plugin_dir_path( __FILE__ ) . 'inc/class.Walker_GA_Menu_Tracking.php' );
 		}
 
 		/**
@@ -89,7 +89,7 @@ if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 		 * @since 1.0
 		 */
 		function edit_nav_menu_walker( $walker, $menu_id ) {
-			return 'Walker_Nav_Menu_Edit_Roles';
+			return 'Walker_Nav_Menu_GA_Menu_Tracking';
 		}
 
 		/**
@@ -116,23 +116,40 @@ if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 				$saved_data['label'] = stripslashes(strip_tags($_POST['menu-item-label'][$menu_item_db_id]));
 			}
 
+			if ( isset( $_POST['menu-item-value'][$menu_item_db_id] ) ) {
+				$saved_data['value'] = intval($_POST['menu-item-value'][$menu_item_db_id]);
+			}
+
+			if ( isset( $_POST['menu-item-noninteraction'][$menu_item_db_id] ) ) {
+				$saved_data['noninteraction'] = $_POST['menu-item-noninteraction'][$menu_item_db_id];
+			}
+
 			if ( ! empty( $saved_data['category'] ) ) {
 					update_post_meta( $menu_item_db_id, '_nav_menu_ga_category', $saved_data['category'] );
 			} else{
-
 					delete_post_meta($menu_item_db_id,'_nav_menu_ga_category' );
 			}
 			if ( ! empty( $saved_data['action'] )) {
 				update_post_meta( $menu_item_db_id, '_nav_menu_ga_action', $saved_data['action'] );
 			} else{
-
 					delete_post_meta($menu_item_db_id,'_nav_menu_ga_action' );
 			}
 			if ( ! empty( $saved_data['label'] ) ) {
 				update_post_meta( $menu_item_db_id, '_nav_menu_ga_label', $saved_data['label'] );
 			} else{
-
 					delete_post_meta($menu_item_db_id,'_nav_menu_ga_label' );
+			}
+
+			if ( ! empty( $saved_data['value'] ) ) {
+				update_post_meta( $menu_item_db_id, '_nav_menu_ga_value', $saved_data['value'] );
+			} else{
+				delete_post_meta($menu_item_db_id,'_nav_menu_ga_value' );
+			}
+
+			if ( isset( $saved_data['noninteraction'] ) ) {
+				update_post_meta( $menu_item_db_id, '_nav_menu_ga_non_interaction', $saved_data['noninteraction'] );
+			} else{
+				delete_post_meta($menu_item_db_id,'_nav_menu_ga_non_interaction' );
 			}
 
 		}
@@ -147,17 +164,21 @@ if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 			$category = get_post_meta( $item->ID, '_nav_menu_ga_category', true );
 			$action = get_post_meta( $item->ID, '_nav_menu_ga_action', true );
 			$label = get_post_meta( $item->ID, '_nav_menu_ga_label', true );
-			//$value = get_post_meta( $item->ID, '_ga_value', true );
-			//$non_interaction = get_post_meta( $item->ID, '_ga_non_interaction', true );
-
+			$value = get_post_meta( $item->ID, '_nav_menu_ga_value', true );
+			$non_interaction = get_post_meta( $item->ID, '_nav_menu_ga_non_interaction', true );
+			if(get_post_meta( $item->ID, '_nav_menu_ga_non_interaction', true )){
+				$non_interaction = true;
+			} else {
+				$non_interaction = false;
+			}
 				return $item_output
-						. '<span style="display:none;" class="ga-tracking" '
+						. '<span style="display:none;" class="ga-tracking"'
 						. ' data-method="' .  $method  . '"'
 						. ' data-category="' .  $category  . '"'
 						. ' data-action="' .  $action  . '"'
 						. ' data-label="' .  $label  . '"'
-					//	. 'data-value="' .  $value  . '"'
-					//	. 'data-noninteraction="' .  $non_interaction  . '"'
+						. ' data-value="' .  $value  . '"'
+						. ' data-noninteraction="' .  $non_interaction  . '"'
 						. '>'
 						. '</span>';
 
