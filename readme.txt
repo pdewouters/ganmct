@@ -1,9 +1,9 @@
-=== Plugin Name ===
+=== GA Nav Menus Tracking ===
 Contributors: pauldewouters
 Tags: google analytics,navigation,menus
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 0.4
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,9 +15,7 @@ Add tracking events to your WordPress navigation menu items!
 
 Reference: https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
 
-This plugin adds 3 custom fields to your nav menu items that represent the parameters for the _trackEvent method of Google Analytics.
-
-There are 2 additional parameters that are not currently supported by the plugin (value and non interaction)
+This plugin adds custom fields to your nav menu items that represent the parameters for the _trackEvent method of Google Analytics.
 
 This plugin requires that you already have Google Analytics tracking active on your WordPress website. For example you have Yoast's Google Analytics for WordPress installed and activated.
 
@@ -42,5 +40,5 @@ I recommend this one: http://wordpress.org/extend/plugins/google-analytics-for-w
 
 == Changelog ==
 
-= 0.4 =
+= 1.0 =
 * Initial version relased to the public.
