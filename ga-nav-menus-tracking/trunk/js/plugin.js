@@ -14,10 +14,10 @@
 
 				(gaEventNA === 1) ?  isNonInteraction = true : isNonInteraction = false;
 				(gaEventLabel.length !== 0) ? labelParam = gaEventLabel : labelParam = '' ;
-				(gaEventValue.length !== 0) ? valueParam = gaEventValue : valueParam = 0 ;
+				(gaEventValue.length !== 0) ? valueParam = gaEventLabel : valueParam = 0 ;
 
 				if(gaEventMethod.length !== 0 && gaEventCat.length !== 0 && gaEventAction.length !== 0){
-					_gaq.push([gaEventMethod,gaEventCat,gaEventAction,labelParam,valueParam,isNonInteraction]);
+					_gaq.push([gaEventMethod,gaEventCat,gaEventAction,labelParam,valueParam,gaEventNA]);
 				}
 
 			}

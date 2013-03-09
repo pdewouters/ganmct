@@ -179,8 +179,10 @@ class Walker_Nav_Menu_GA_Menu_Tracking extends Walker_Nav_Menu {
 				</label>
 			</p>
 
-			<p class="field-custom description description-wide"><strong>GA Tracking Options</strong></p>
+
 			<input type="hidden" name="ga-nav-menu-tracking-nonce" value="<?php echo wp_create_nonce( 'nav-menu-nonce-name' ); ?>" />
+
+			<p class="field-custom description description-wide">
 
 			<p class="field-custom description description-wide">
 				<label for="edit-menu-item-category-<?php echo $item_id; ?>">
