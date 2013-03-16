@@ -1,0 +1,115 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GA Nav Menus Tracking\n"
+"POT-Creation-Date: 2013-03-09 16:17-0300\n"
+"PO-Revision-Date: 2013-03-09 16:17-0300\n"
+"Last-Translator: \n"
+"Language-Team: Secret Stache <paul@secretstache.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:79
+#: inc/class.Walker_GA_Menu_Tracking.php:79
+#, php-format
+msgid "%s (Invalid)"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:84
+#: inc/class.Walker_GA_Menu_Tracking.php:84
+#, php-format
+msgid "%s (Pending)"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:125
+#: inc/class.Walker_GA_Menu_Tracking.php:125
+msgid "Edit Menu Item"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:134
+#: inc/class.Walker_GA_Menu_Tracking.php:134
+msgid "URL"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:141
+#: inc/class.Walker_GA_Menu_Tracking.php:141
+msgid "Navigation Label"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:148
+#: inc/class.Walker_GA_Menu_Tracking.php:148
+msgid "Title Attribute"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:156
+#: inc/class.Walker_GA_Menu_Tracking.php:156
+msgid "Open link in a new window/tab"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:162
+#: inc/class.Walker_GA_Menu_Tracking.php:162
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:169
+#: inc/class.Walker_GA_Menu_Tracking.php:169
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:176
+#: inc/class.Walker_GA_Menu_Tracking.php:176
+msgid "Description"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:178
+#: inc/class.Walker_GA_Menu_Tracking.php:178
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:189
+#: inc/class.Walker_GA_Menu_Tracking.php:187
+msgid "Category (required)"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:196
+#: inc/class.Walker_GA_Menu_Tracking.php:194
+msgid "Action (required)"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:203
+#: inc/class.Walker_GA_Menu_Tracking.php:201
+msgid "Label (optional)"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:210
+#: inc/class.Walker_GA_Menu_Tracking.php:208
+msgid "Value (optional)"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:217
+#: inc/class.Walker_GA_Menu_Tracking.php:215
+msgid "Non Interaction (optional)"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:225
+#: inc/class.Walker_GA_Menu_Tracking.php:223
+#, php-format
+msgid "Original: %s"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:238
+#: inc/class.Walker_GA_Menu_Tracking.php:236
+msgid "Remove"
+msgstr ""
+
+#: ga-nav-menus-tracking/trunk/inc/class.Walker_GA_Menu_Tracking.php:240
+#: inc/class.Walker_GA_Menu_Tracking.php:238
+msgid "Cancel"
+msgstr ""

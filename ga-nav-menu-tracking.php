@@ -2,7 +2,7 @@
 /*
 Plugin Name: Google Analytics Nav Menu Tracking
 Plugin URI: http://secretstache.com
-Description: Hide custom menu items based on user roles
+Description: Adds tracking events to your WordPress navigation menu items
 Version: 1.0.3
 Author: Paul de Wouters
 Author URI: http://secretstache.com

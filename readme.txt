@@ -40,5 +40,11 @@ I recommend this one: http://wordpress.org/extend/plugins/google-analytics-for-w
 
 == Changelog ==
 
+= 1.0.4 =
+added pot file for translators
+
+= 1.0.3 =
+Fixed a bug in javascript
+
 = 1.0 =
 * Initial version relased to the public.
