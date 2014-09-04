@@ -3,9 +3,9 @@
 Plugin Name: Google Analytics Nav Menu Tracking
 Plugin URI: http://secretstache.com
 Description: Adds tracking events to your WordPress navigation menu items
-Version: 1.0.5
+Version: 1.0.6
 Author: Paul de Wouters
-Author URI: http://secretstache.com
+Author URI: http://paulwp.com
 License: GPL2
 
     Copyright 2013  Secret Stache Media (email: paul@secretstache.com)
