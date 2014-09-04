@@ -115,19 +115,19 @@ if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 			}
 
 			if ( ! empty( $saved_data['category'] ) ) {
-					update_post_meta( $menu_item_db_id, '_nav_menu_ga_category', $saved_data['category'] );
+				update_post_meta( $menu_item_db_id, '_nav_menu_ga_category', $saved_data['category'] );
 			} else{
-					delete_post_meta($menu_item_db_id,'_nav_menu_ga_category' );
+				delete_post_meta($menu_item_db_id,'_nav_menu_ga_category' );
 			}
-			if ( ! empty( $saved_data['action'] )) {
+			if ( ! empty( $saved_data['action'] ) ) {
 				update_post_meta( $menu_item_db_id, '_nav_menu_ga_action', $saved_data['action'] );
 			} else{
-					delete_post_meta($menu_item_db_id,'_nav_menu_ga_action' );
+				delete_post_meta($menu_item_db_id,'_nav_menu_ga_action' );
 			}
 			if ( ! empty( $saved_data['label'] ) ) {
 				update_post_meta( $menu_item_db_id, '_nav_menu_ga_label', $saved_data['label'] );
 			} else{
-					delete_post_meta($menu_item_db_id,'_nav_menu_ga_label' );
+				delete_post_meta($menu_item_db_id,'_nav_menu_ga_label' );
 			}
 
 			if ( ! empty( $saved_data['value'] ) ) {
@@ -149,7 +149,7 @@ if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 		 * event handler script
 		 */
 		function add_tracking( $item_output, $item, $depth, $args ) {
-      // Ref: https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
+			// Ref: https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
 			$method = '_trackEvent';
 			$category = get_post_meta( $item->ID, '_nav_menu_ga_category', true );
 			$action = get_post_meta( $item->ID, '_nav_menu_ga_action', true );
@@ -161,16 +161,16 @@ if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 			} else {
 				$non_interaction = false;
 			}
-				return $item_output
-						. '<span style="display:none;" class="ga-tracking"'
-						. ' data-method="' .  $method  . '"'
-						. ' data-category="' .  $category  . '"'
-						. ' data-action="' .  $action  . '"'
-						. ' data-label="' .  $label  . '"'
-						. ' data-value="' .  $value  . '"'
-						. ' data-noninteraction="' .  $non_interaction  . '"'
-						. '>'
-						. '</span>';
+			return $item_output
+			       . '<span style="display:none;" class="ga-tracking"'
+			       . ' data-method="' . esc_attr( $method ) . '"'
+			       . ' data-category="' . esc_attr( $category ) . '"'
+			       . ' data-action="' . esc_attr( $action ) . '"'
+			       . ' data-label="' . esc_attr( $label ) . '"'
+			       . ' data-value="' . esc_attr( $value ) . '"'
+			       . ' data-noninteraction="' .  esc_attr( $non_interaction ) . '"'
+			       . '>'
+			       . '</span>';
 
 		}
 
