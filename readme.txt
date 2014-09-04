@@ -2,7 +2,7 @@
 Contributors: pauldewouters, secretstache
 Tags: google analytics,navigation,menus
 Requires at least: 3.2
-Tested up to: 3.5
+Tested up to: 4.0
 Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
