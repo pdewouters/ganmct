@@ -89,9 +89,6 @@ if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 		 * Save the custom field data
 		 */
 		function nav_update( $menu_id, $menu_item_db_id, $args ) {
-			// global $wp_roles;
-
-			//$allowed_roles = apply_filters( 'nav_menu_roles', $wp_roles->role_names );
 
 			// verify this came from our screen and with proper authorization.
 			if ( ! isset( $_POST['ga-nav-menu-tracking-nonce'] ) || ! wp_verify_nonce( $_POST['ga-nav-menu-tracking-nonce'], 'nav-menu-nonce-name' ) )
