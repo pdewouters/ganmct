@@ -79,7 +79,6 @@ if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 		 * CALLBACK FUNCTION FOR:  add_action( 'plugins_loaded', array( $this,'load_text_domain'));
 		 * @since 1.0
 		 */
-
 		function load_text_domain() {
 			load_plugin_textdomain( 'ga-nav-menu-tracking', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		}
