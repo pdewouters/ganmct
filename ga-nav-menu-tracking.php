@@ -25,14 +25,8 @@ License: GPL2
 
 */
 
-
 // don't load directly
-if ( ! function_exists( 'is_admin' ) ) {
-	header( 'Status: 403 Forbidden' );
-	header( 'HTTP/1.1 403 Forbidden' );
-	exit();
-}
-
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( "GA_Nav_Tracking" ) ) :
 
